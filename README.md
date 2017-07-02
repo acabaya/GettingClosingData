@@ -85,37 +85,37 @@ The script called run_analysis.R peforms the following:
 0. Downloads the data the data from the URL provided above and extracts to the working directory set in the ‘dirData’
 1. Merge the training and the test sets to create one data set.
 	
-	1.1 subject_train.txt, Y_train.txt and X_train.txt found in the train folder are loaded to tables and are merged by column.
+	1.subject_train.txt, Y_train.txt and X_train.txt found in the train folder are loaded to tables and are merged by column.
 	
-	1.2 subject_test.txt, Y_test.txt and X_test.txt found in the test folder are loaded to tables and are merged by column.
+	2 subject_test.txt, Y_test.txt and X_test.txt found in the test folder are loaded to tables and are merged by column.
 	
-	1.3 both of the data tables are then merged by row.
+	3 both of the data tables are then merged by row.
 
 2. Extract only the measurements on the mean and standard deviation for each measurement.
 	
-	2.1 Load the column names from the features.txt included in the data set 
+	1 Load the column names from the features.txt included in the data set 
 	
-	2.2 Determine Required Columns with strings “mean()” or “std()” included in their names 
+	2 Determine Required Columns with strings “mean()” or “std()” included in their names 
 	
-	2.3 Remove unnecessary columns from the Total data frame
+	3 Remove unnecessary columns from the Total data frame
 
 
 3. Use descriptive activity names to name the activities in the data set
 	
-	3.1 Load the activity labels from the data set activity_labels.txt
+	1 Load the activity labels from the data set activity_labels.txt
 	
-	3.2 Replace the Activity Factors with the corresponding labels.
+	2 Replace the Activity Factors with the corresponding labels.
 
 4. Appropriately labels the data set with descriptive variable names.
 	
-	4.1 Remove "()" from the original column names
+	1 Remove "()" from the original column names
 	
-	4.2 Replace original variable labels with the new one below
+	2 Replace original variable labels with the new one below
 
 5. From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject.
 	
-	5.1 Melt the Data Set with the Subject and Activity as ID
+	1 Melt the Data Set with the Subject and Activity as ID
 	
-	5.2 Recast with the mean calculated for each group
+	2 Recast with the mean calculated for each group
 	
-	5.3 Save the result to tidy.txt in the declared working directory “dirResults”
+	3 Save the result to tidy.txt in the declared working directory “dirResults”
